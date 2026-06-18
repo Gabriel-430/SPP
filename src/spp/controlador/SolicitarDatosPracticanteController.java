@@ -17,6 +17,7 @@ import spp.service.CursoService;
 import spp.service.PracticanteService;
 import spp.utilidades.GeneradorContrasenia;
 import spp.utilidades.UtilidadesGUI;
+import javafx.scene.control.TextFormatter;
 
 /*
  * Autor: Emiliano Morales
@@ -59,6 +60,7 @@ public class SolicitarDatosPracticanteController {
     private void initialize() {
         cargarSexos();
         cargarCursosActivos();
+        limitarCampos();
     }
 
     @FXML
@@ -196,5 +198,37 @@ public class SolicitarDatosPracticanteController {
         alerta.setHeaderText(null);
         alerta.setContentText(mensaje);
         alerta.showAndWait();
+    }
+    
+    private void limitarCampos() {
+        tfMatricula.setTextFormatter(new TextFormatter<String>(cambio -> {
+        String textoNuevo = cambio.getControlNewText();
+
+        if (textoNuevo.length() <= 9) {
+            return cambio;
+        }
+
+        return null;
+        }));
+
+    tfCreditosAcumulados.setTextFormatter(new TextFormatter<String>(cambio -> {
+        String textoNuevo = cambio.getControlNewText();
+
+        if (textoNuevo.matches("\\d{0,3}")) {
+            return cambio;
+        }
+
+        return null;
+    }));
+
+    tfNombreCompleto.setTextFormatter(new TextFormatter<String>(cambio -> {
+        String textoNuevo = cambio.getControlNewText();
+
+        if (textoNuevo.length() <= 40) {
+            return cambio;
+        }
+
+        return null;
+    }));
     }
 }

@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.ActualizarResponsableTecnicoController">
-    
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="spp.controlador.ActualizarResponsableTecnicoController">
+
+    <children>
+        <Label layoutX="135.0" layoutY="35.0"
+               text="Actualizar Responsable Técnico"
+               textFill="#0a1930">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+
+        <Label layoutX="80.0" layoutY="100.0" text="Nombre completo" />
+        <TextField fx:id="tfNombreCompleto"
+                   layoutX="80.0" layoutY="125.0"
+                   prefWidth="440.0" prefHeight="35.0" />
+
+        <Label layoutX="80.0" layoutY="175.0" text="Teléfono" />
+        <TextField fx:id="tfTelefono"
+                   layoutX="80.0" layoutY="200.0"
+                   prefWidth="440.0" prefHeight="35.0" />
+
+        <Label layoutX="80.0" layoutY="250.0" text="Correo electrónico" />
+        <TextField fx:id="tfCorreo"
+                   layoutX="80.0" layoutY="275.0"
+                   prefWidth="440.0" prefHeight="35.0" />
+
+        <Label fx:id="lblMensaje"
+               layoutX="80.0" layoutY="315.0"
+               prefWidth="440.0"
+               textFill="#b00020"
+               wrapText="true" />
+
+        <Button layoutX="80.0" layoutY="340.0"
+                prefWidth="200.0" prefHeight="40.0"
+                text="Actualizar"
+                onAction="#actualizar"
+                style="-fx-background-color: #1b365d; -fx-text-fill: white;" />
+
+        <Button layoutX="320.0" layoutY="340.0"
+                prefWidth="200.0" prefHeight="40.0"
+                text="Regresar"
+                onAction="#regresar"
+                style="-fx-background-color: white; -fx-border-color: #cccccc;" />
+    </children>
 </AnchorPane>
