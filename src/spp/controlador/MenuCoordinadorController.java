@@ -1,17 +1,10 @@
 package spp.controlador;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import spp.utilidades.UtilidadesGUI;
 
-public class MenuCoordinadorController implements Initializable {
-
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-    }
+public class MenuCoordinadorController {
 
     @FXML
     void mostrarRegistrarProyecto(Event event) {
@@ -29,7 +22,7 @@ public class MenuCoordinadorController implements Initializable {
     }
 
     @FXML
-    void mostrarMostrarPracticantes(Event event) {
+    void mostrarPracticantes(Event event) {
         UtilidadesGUI.mostrarGUI("/spp/vista/GUI-MostrarPracticantes.fxml", event, "Mostrar Practicantes");
     }
 

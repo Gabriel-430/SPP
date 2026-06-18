@@ -36,8 +36,8 @@
             <VBox spacing="22.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#mostrarRegistrarPracticante" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Registrar practicante" />
-                  <Button mnemonicParsing="false" onAction="#mostrarActivarPracticante" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Activar practicante" />
-                  <Button mnemonicParsing="false" onAction="#mostrarInactivarPracticante" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Inactivar practicante" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Activar practicante" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Inactivar practicante" />
                   <Button mnemonicParsing="false" onAction="#mostrarPracticantes" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Mostrar practicantes" />
                </children>
             </VBox>

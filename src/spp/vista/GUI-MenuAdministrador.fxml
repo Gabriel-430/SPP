@@ -40,6 +40,6 @@
          </children>
       </HBox>
 
-      <Button layoutX="330.0" layoutY="520.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cerrar sesión" />
+      <Button layoutX="330.0" layoutY="520.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cerrar sesión" />
    </children>
 </AnchorPane>
