@@ -24,7 +24,7 @@ public class MenuAdministradorController implements Initializable {
     }
 
     @FXML
-    void mostrarMostrarProfesores(Event event) {
+    void mostrarProfesores(Event event) {
         UtilidadesGUI.mostrarGUI("/spp/vista/GUI-MostrarProfesores.fxml", event, "Mostrar Profesores");
     }
 
