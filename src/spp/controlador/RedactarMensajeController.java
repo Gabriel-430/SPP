@@ -1,6 +1,7 @@
 package spp.controlador;
 
 import java.util.Optional;
+import java.util.regex.Pattern;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -19,6 +20,8 @@ import spp.utilidades.UtilidadesGUI;
  * Descripción: Controla la GUI de redacción de mensajes.
  */
 public class RedactarMensajeController {
+
+    private static final String REGEX_DESTINATARIO = "^([A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}|[a-zA-Z0-9_]+)$";
 
     @FXML
     private TextField txtDestinatario;
@@ -49,13 +52,18 @@ public class RedactarMensajeController {
 
     @FXML
     void clicEnviar(Event event) {
-        String destinatario = txtDestinatario.getText();
+        String destinatario = txtDestinatario.getText().trim();
         String asunto = txtAsunto.getText();
         String contenido = txtContenido.getText();
         int idRemitente = SesionUsuario.getUsuarioActual().getIdUsuario();
 
-        if (asunto == null || asunto.trim().isEmpty() || contenido == null || contenido.trim().isEmpty()) {
+        if (asunto.isEmpty() || contenido.isEmpty() || destinatario.isEmpty()) {
             Alerta.mostrarAlertaAdvertencia("Campos faltantes", "Faltan campos por llenar, verifique que los campos estén completos e inténtelo de nuevo.");
+            return;
+        }
+
+        if (!Pattern.matches(REGEX_DESTINATARIO, destinatario)) {
+            Alerta.mostrarAlertaAdvertencia("Formato Inválido", "El formato del destinatario no es válido. Ingrese un usuario o correo electrónico correcto sin espacios.");
             return;
         }
 
@@ -103,9 +111,15 @@ public class RedactarMensajeController {
         Optional<ButtonType> resultado = confirmacion.showAndWait();
 
         if (resultado.isPresent() && resultado.get() == btnGuardar) {
-            String destinatario = txtDestinatario.getText();
-            String asunto = txtAsunto.getText();
-            String contenido = txtContenido.getText();
+            String destinatario = txtDestinatario.getText().trim();
+            String asunto = txtAsunto.getText().trim();
+            String contenido = txtContenido.getText().trim();
+
+            if (asunto.isEmpty() && contenido.isEmpty()) {
+                UtilidadesGUI.mostrarGUI(obtenerRutaGUIMenu(), event, "Menú Principal");
+                return;
+            }
+
             int idRemitente = SesionUsuario.getUsuarioActual().getIdUsuario();
 
             Mensaje borrador = mensajeService.crearMensaje(asunto, contenido);
