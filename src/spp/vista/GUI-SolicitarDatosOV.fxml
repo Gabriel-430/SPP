@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.SolicitarDatosOVController">
+   <children>
+      <Label layoutX="245.0" layoutY="45.0" text="Registrar Organización Vinculada" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="255.0" layoutY="85.0" text="Ingrese o seleccione la organización que desarrolla el proyecto" textFill="#1f2937">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="125.0" prefWidth="800.0" />
+
+      <Label layoutX="95.0" layoutY="155.0" text="Tipo de registro" />
+
+      <RadioButton fx:id="rbNuevaEmpresa" layoutX="95.0" layoutY="185.0" mnemonicParsing="false" onAction="#cambiarTipoRegistro" selected="true" text="Nueva empresa" />
+
+      <RadioButton fx:id="rbEmpresaExistente" layoutX="326.0" layoutY="185.0" mnemonicParsing="false" onAction="#cambiarTipoRegistro" text="Empresa existente" />
+
+      <Label layoutX="95.0" layoutY="230.0" text="Organización vinculada existente" />
+
+      <ComboBox fx:id="cmbOrganizacionExistente" disable="true" layoutX="95.0" layoutY="255.0" prefHeight="45.0" prefWidth="710.0" promptText="Seleccione una organización vinculada" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="325.0" text="Razón social" />
+      <TextField fx:id="tfRazonSocial" layoutX="95.0" layoutY="350.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese la razón social" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="475.0" layoutY="325.0" text="Nombre comercial" />
+      <TextField fx:id="tfNombreComercial" layoutX="475.0" layoutY="350.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese el nombre comercial" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="410.0" text="RFC" />
+      <TextField fx:id="tfRfc" layoutX="95.0" layoutY="435.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese el RFC" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="475.0" layoutY="410.0" text="Dirección" />
+      <TextField fx:id="tfDireccion" layoutX="475.0" layoutY="435.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese la dirección" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label fx:id="lblMensaje" layoutX="95.0" layoutY="500.0" prefWidth="500.0" textFill="#b00020" wrapText="true" />
+
+      <Button layoutX="475.0" layoutY="535.0" mnemonicParsing="false" onAction="#cancelarRegistro" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cancelar" />
+
+      <Button layoutX="655.0" layoutY="535.0" mnemonicParsing="false" onAction="#continuarRegistro" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Continuar" />
+   </children>
+</AnchorPane>

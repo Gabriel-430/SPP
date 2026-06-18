@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="100.0" layoutY="50.0" text="Detalles del Proyecto" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="100.0" layoutY="95.0" text="Información detallada para su consideración" textFill="#666666">
+         <font><Font size="15.0" /></font>
+      </Label>
+      
+      <Separator layoutX="100.0" layoutY="135.0" prefWidth="700.0" />
+      
+      <HBox layoutX="100.0" layoutY="160.0" spacing="30.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Título del Proyecto" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField disable="true" prefHeight="40.0" prefWidth="360.0" text="Sistema de Gestión Escolar" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Cupo Disponible" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField disable="true" prefHeight="40.0" prefWidth="120.0" text="3" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Responsable Técnico" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField disable="true" prefHeight="40.0" prefWidth="160.0" text="Ing. Juan Pérez" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <Label layoutX="100.0" layoutY="260.0" text="Descripción y Actividades" textFill="#333333">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <TextArea disable="true" layoutX="100.0" layoutY="290.0" prefHeight="200.0" prefWidth="700.0" text="Descripción detallada de las actividades..." style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-font-size: 14px;" wrapText="true" />
+      
+      <Button layoutX="380.0" layoutY="540.0" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-text-fill: #333333; -fx-font-size: 14px; -fx-cursor: hand;" text="Regresar a la lista de proyectos" />
+      <Button layoutX="650.0" layoutY="540.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" text="Elegir proyecto" />
+   </children>
+</AnchorPane>

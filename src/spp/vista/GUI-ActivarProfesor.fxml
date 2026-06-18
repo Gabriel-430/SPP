@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="100.0" layoutY="50.0" text="Asignar Curso para Activación" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="100.0" layoutY="95.0" text="Seleccione el profesor inactivo y asigne un curso libre" textFill="#666666">
+         <font><Font size="15.0" /></font>
+      </Label>
+      
+      <Separator layoutX="100.0" layoutY="135.0" prefWidth="700.0" />
+      
+      <Label layoutX="100.0" layoutY="160.0" text="1. Profesores Inactivos" textFill="#d9534f">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <TableView layoutX="100.0" layoutY="190.0" prefHeight="150.0" prefWidth="700.0" style="-fx-border-color: #eeeeee;">
+         <columns>
+            <TableColumn prefWidth="150.0" text="No. Personal" />
+            <TableColumn prefWidth="350.0" text="Nombre Completo" />
+            <TableColumn prefWidth="195.0" text="Turno" />
+         </columns>
+      </TableView>
+      
+      <Label layoutX="100.0" layoutY="370.0" text="2. Cursos Libres Disponibles" textFill="#333333">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <ComboBox layoutX="100.0" layoutY="400.0" prefHeight="40.0" prefWidth="700.0" promptText="Seleccione un curso de la lista para asignar..." style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-font-size: 14px;" />
+      
+      <Button layoutX="480.0" layoutY="540.0" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-text-fill: #333333; -fx-font-size: 14px; -fx-cursor: hand;" text="Regresar" />
+      <Button layoutX="630.0" layoutY="540.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" text="Activar y Asignar" />
+   </children>
+</AnchorPane>

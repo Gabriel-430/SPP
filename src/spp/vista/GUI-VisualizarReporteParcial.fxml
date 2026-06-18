@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="650.0" prefWidth="950.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.VisualizarReporteParcialController">
+
+    <top>
+        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets bottom="10" left="35" right="35" top="25" />
+            </padding>
+           <children>
+   
+               <Label text="Visualizar Reporte Parcial" textFill="#1B396A">
+                   <font>
+                       <Font size="24.0" />
+                   </font>
+               </Label>
+   
+               <Separator />
+           </children>
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="35.0">
+            <padding>
+                <Insets bottom="20" left="35" right="35" top="10" />
+            </padding>
+
+            <children>
+
+                <VBox spacing="12.0" HBox.hgrow="ALWAYS">
+                    <children>
+
+                        <Label text="Vista previa del documento">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+
+                        <TextArea fx:id="txtVisor" editable="false" prefHeight="420.0" promptText="Contenido del reporte..." wrapText="true" VBox.vgrow="ALWAYS" />
+
+                        <HBox alignment="CENTER_RIGHT">
+                            <children>
+                                <Button onAction="#clicDescargar" prefWidth="170.0" text="Descargar" />
+                            </children>
+                        </HBox>
+
+                    </children>
+                </VBox>
+
+                <VBox prefWidth="280.0" spacing="18.0">
+
+                    <children>
+
+                        <Label text="Herramientas de evaluación" textFill="#1B396A">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+
+                        <Separator />
+
+                        <Label text="Calificación (0 - 100)" />
+
+                        <TextField fx:id="txtCalificacion" prefHeight="40.0" promptText="Ej. 95" />
+
+                        <Button maxWidth="Infinity" onAction="#calificar" prefHeight="42.0" style="-fx-background-color: rgb(27,57,106);                                        -fx-text-fill: white;                                        -fx-font-weight: bold;" text="Calificar" />
+
+                        <Button maxWidth="Infinity" onAction="#clicAgregarObservacion" prefHeight="40.0" text="Agregar observación" />
+
+                        <Region VBox.vgrow="ALWAYS" />
+
+                        <Button maxWidth="Infinity" onAction="#cerrarGUI" prefHeight="40.0" text="Cancelar" />
+
+                    </children>
+
+                </VBox>
+
+            </children>
+
+        </HBox>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.SolicitarDatosResponsableController">
+   <children>
+      <Label layoutX="270.0" layoutY="45.0" text="Registrar Responsable Técnico" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="270.0" layoutY="85.0" text="Ingrese o seleccione al responsable técnico del proyecto" textFill="#1f2937">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="125.0" prefWidth="800.0" />
+
+      <Label layoutX="95.0" layoutY="155.0" text="Tipo de registro" />
+
+      <RadioButton fx:id="rbNuevoResponsable" layoutX="95.0" layoutY="185.0" mnemonicParsing="false" onAction="#cambiarTipoRegistro" selected="true" text="Nuevo responsable" />
+
+      <RadioButton fx:id="rbResponsableExistente" layoutX="378.0" layoutY="185.0" mnemonicParsing="false" onAction="#cambiarTipoRegistro" text="Responsable existente" />
+
+      <Label layoutX="95.0" layoutY="235.0" text="Responsable existente" />
+
+      <ComboBox fx:id="cmbResponsableExistente" disable="true" layoutX="95.0" layoutY="260.0" prefHeight="45.0" prefWidth="710.0" promptText="Seleccione un responsable técnico" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="330.0" text="Nombre completo" />
+      <TextField fx:id="tfNombreCompleto" layoutX="95.0" layoutY="355.0" prefHeight="45.0" prefWidth="710.0" promptText="Ingrese el nombre completo del responsable" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="430.0" text="Teléfono" />
+      <TextField fx:id="tfTelefono" layoutX="95.0" layoutY="455.0" prefHeight="45.0" prefWidth="330.0" promptText="10 dígitos" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="475.0" layoutY="430.0" text="Correo electrónico" />
+      <TextField fx:id="tfCorreo" layoutX="475.0" layoutY="455.0" prefHeight="45.0" prefWidth="330.0" promptText="correo@dominio.com" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label fx:id="lblMensaje" layoutX="95.0" layoutY="510.0" prefWidth="600.0" textFill="#b00020" wrapText="true" />
+
+      <Button layoutX="475.0" layoutY="545.0" mnemonicParsing="false" onAction="#cancelarRegistro" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cancelar" />
+
+      <Button layoutX="655.0" layoutY="545.0" mnemonicParsing="false" onAction="#continuarRegistro" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Continuar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.MostrarPracticantesController">
+   <children>
+      <Label layoutX="300.0" layoutY="45.0" text="Practicantes registrados" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="95.0" prefWidth="800.0" />
+
+      <TableView fx:id="tvPracticantes" layoutX="50.0" layoutY="125.0" prefHeight="390.0" prefWidth="800.0">
+         <columns>
+            <TableColumn fx:id="tcMatricula" prefWidth="110.0" text="Matrícula" />
+            <TableColumn fx:id="tcNombreCompleto" prefWidth="220.0" text="Nombre completo" />
+            <TableColumn fx:id="tcSexo" prefWidth="110.0" text="Sexo" />
+            <TableColumn fx:id="tcCreditos" prefWidth="110.0" text="Créditos" />
+            <TableColumn fx:id="tcSeguro" prefWidth="130.0" text="Seguro médico" />
+            <TableColumn fx:id="tcEstado" prefWidth="115.0" text="Estado" />
+         </columns>
+      </TableView>
+
+      <Label fx:id="lblMensaje" layoutX="50.0" layoutY="530.0" prefWidth="500.0" textFill="#0a1930">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+
+      <Button mnemonicParsing="false" onAction="#regresar" layoutX="610.0" layoutY="520.0" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Regresar" />
+   </children>
+</AnchorPane>

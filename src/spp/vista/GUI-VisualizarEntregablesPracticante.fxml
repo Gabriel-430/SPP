@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.VisualizarEntregablesPracticanteController">
+   <children>
+      <VBox layoutX="40.0" layoutY="30.0" prefHeight="590.0" prefWidth="820.0" spacing="15.0">
+         <children>
+            <Label text="Expediente del Practicante" textFill="#0a1930"><font><Font name="System Bold" size="26.0" /></font></Label>
+            <Separator prefWidth="820.0" />
+            <ComboBox fx:id="cmbDocumentos" onAction="#seleccionarDocumento" prefWidth="400.0" promptText="Seleccionar documento..." />
+            <ScrollPane prefHeight="380.0" prefWidth="820.0" style="-fx-border-color: #cccccc;">
+               <content>
+                  <ImageView fx:id="imgVisor" fitWidth="800.0" preserveRatio="true" />
+               </content>
+            </ScrollPane>
+            <HBox alignment="CENTER_RIGHT" spacing="20.0">
+               <children>
+                  <Button onAction="#clicRegresar" prefHeight="40.0" prefWidth="150.0" text="Regresar" />
+                  <Button fx:id="btnDescargar" disable="true" onAction="#clicDescargar" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white;" text="Descargar" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

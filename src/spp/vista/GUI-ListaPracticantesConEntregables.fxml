@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.ListaPracticantesConEntregablesController">
+   <children>
+      <Label layoutX="50.0" layoutY="45.0" text="Entregables de Practicantes" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="85.0" text="Seleccione un practicante para ver sus documentos entregados." textFill="#666666">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="120.0" prefWidth="800.0" />
+
+      <TableView fx:id="tblPracticantes" layoutX="50.0" layoutY="145.0" prefHeight="380.0" prefWidth="800.0" style="-fx-border-color: #cccccc; -fx-background-radius: 4; -fx-border-radius: 4; -fx-font-size: 14px;">
+         <columns>
+            <TableColumn fx:id="colMatricula" prefWidth="150.0" text="Matrícula" />
+            <TableColumn fx:id="colNombre" prefWidth="450.0" text="Nombre completo" />
+            <TableColumn fx:id="colDocumentos" prefWidth="198.0" text="Documentos entregados" />
+         </columns>
+      </TableView>
+
+      <Button layoutX="420.0" layoutY="550.0" mnemonicParsing="false" onAction="#clicRegresar" prefHeight="45.0" prefWidth="180.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Regresar" />
+      <Button layoutX="620.0" layoutY="550.0" mnemonicParsing="false" onAction="#clicVerDocumentos" prefHeight="45.0" prefWidth="230.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Ver documentos entregados" />
+   </children>
+</AnchorPane>

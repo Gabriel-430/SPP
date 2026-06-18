@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="35.0" layoutY="49.0" text="Evaluar Reporte Parcial" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="35.0" layoutY="98.0" text="Seleccione el reporte parcial del practicante para su evaluación" textFill="#666666">
+         <font><Font size="15.0" /></font>
+      </Label>
+      
+      <Separator layoutX="37.0" layoutY="141.0" prefHeight="0.0" prefWidth="825.0" />
+      
+      <TableView layoutX="35.0" layoutY="160.0" prefHeight="330.0" prefWidth="831.0" style="-fx-border-color: #cccccc; -fx-background-radius: 4; -fx-border-radius: 4; -fx-font-size: 14px;">
+        <columns>
+          <TableColumn prefWidth="120.0" text="Matrícula" />
+          <TableColumn prefWidth="280.0" text="Nombre del Practicante" />
+          <TableColumn prefWidth="150.0" text="Fecha de Entrega" />
+          <TableColumn prefWidth="148.0" text="Estado" />
+        </columns>
+      </TableView>
+      
+      <Button layoutX="480.0" layoutY="540.0" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-text-fill: #333333; -fx-font-size: 14px; -fx-cursor: hand;" text="Cancelar" />
+      <Button layoutX="630.0" layoutY="540.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" text="Seleccionar Reporte" />
+   </children>
+</AnchorPane>

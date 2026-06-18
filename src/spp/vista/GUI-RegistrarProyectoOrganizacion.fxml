@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="100.0" layoutY="50.0" text="Registrar Proyecto - Datos de la Organización" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="100.0" layoutY="95.0" text="Ingrese la información de la organización vinculada (OV)" textFill="#666666">
+         <font><Font size="15.0" /></font>
+      </Label>
+      
+      <Separator layoutX="100.0" layoutY="135.0" prefWidth="700.0" />
+      
+      <Label layoutX="100.0" layoutY="160.0" text="Tipo de Organización" textFill="#333333">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <HBox layoutX="100.0" layoutY="190.0" spacing="30.0">
+         <children>
+            <RadioButton mnemonicParsing="false" selected="true" text="Nueva Empresa">
+               <font><Font size="14.0" /></font>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" text="Empresa existente">
+               <font><Font size="14.0" /></font>
+            </RadioButton>
+         </children>
+      </HBox>
+      
+      <Label layoutX="100.0" layoutY="250.0" text="Nombre de la Organización" textFill="#333333">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <TextField layoutX="100.0" layoutY="280.0" prefHeight="40.0" prefWidth="700.0" promptText="Ej. Empresa S.A. de C.V." style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+      
+      <HBox layoutX="100.0" layoutY="350.0" spacing="30.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Sector" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="335.0" promptText="Ej. Público" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Ciudad" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="335.0" promptText="Ciudad de ubicación" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <Label layoutX="100.0" layoutY="440.0" text="Dirección" textFill="#333333">
+         <font><Font name="System Bold" size="14.0" /></font>
+      </Label>
+      <TextField layoutX="100.0" layoutY="470.0" prefHeight="40.0" prefWidth="700.0" promptText="Calle, Número, Colonia" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+      
+      <Button layoutX="480.0" layoutY="540.0" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-text-fill: #333333; -fx-font-size: 14px; -fx-cursor: hand;" text="Cancelar" />
+      <Button layoutX="630.0" layoutY="540.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" text="Continuar" />
+   </children>
+</AnchorPane>

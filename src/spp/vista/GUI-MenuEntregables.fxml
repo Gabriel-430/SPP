@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.MenuEntregablesController">
+   <children>
+      <Label layoutX="295.0" layoutY="50.0" text="Menú Principal - Practicante" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Separator layoutX="50.0" layoutY="100.0" prefWidth="800.0" />
+      
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="180.0" prefWidth="800.0" spacing="20.0">
+         <children>
+            <VBox spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Añadir horario" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Añadir reporte parcial" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#mostrarGUISubirReporteMensual" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Añadir reporte mensual" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Añadir reporte final" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Añadir cronograma" />
+                  <Button mnemonicParsing="false" onAction="#mostrarGUISubirAutoevaluacion" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Añadir autoevaluación" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <Button layoutX="380.0" layoutY="520.0" mnemonicParsing="false" onAction="#volverMenuPrincipal" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-text-fill: #333333; -fx-font-size: 14px; -fx-cursor: hand;" text="Volver" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0"
+            style="-fx-background-color: #ffffff;"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="spp.controlador.ActualizarOVController">
+
+   <children>
+
+      <Label layoutX="250.0"
+             layoutY="45.0"
+             text="Actualizar Organización Vinculada"
+             textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0"
+                 layoutY="105.0"
+                 prefWidth="800.0" />
+
+      <Label layoutX="95.0"
+             layoutY="155.0"
+             text="Razón social" />
+
+      <TextField fx:id="tfRazonSocial"
+                 layoutX="95.0"
+                 layoutY="180.0"
+                 prefHeight="45.0"
+                 prefWidth="330.0" />
+
+      <Label layoutX="475.0"
+             layoutY="155.0"
+             text="Nombre comercial" />
+
+      <TextField fx:id="tfNombreComercial"
+                 layoutX="475.0"
+                 layoutY="180.0"
+                 prefHeight="45.0"
+                 prefWidth="330.0" />
+
+      <Label layoutX="95.0"
+             layoutY="260.0"
+             text="RFC" />
+
+      <TextField fx:id="tfRfc"
+                 layoutX="95.0"
+                 layoutY="285.0"
+                 prefHeight="45.0"
+                 prefWidth="330.0" />
+
+      <Label layoutX="475.0"
+             layoutY="260.0"
+             text="Dirección" />
+
+      <TextField fx:id="tfDireccion"
+                 layoutX="475.0"
+                 layoutY="285.0"
+                 prefHeight="45.0"
+                 prefWidth="330.0" />
+
+      <Label fx:id="lblMensaje"
+             layoutX="95.0"
+             layoutY="380.0"
+             prefWidth="600.0"
+             textFill="#b00020"
+             wrapText="true" />
+
+      <Button mnemonicParsing="false"
+              onAction="#regresar"
+              layoutX="475.0"
+              layoutY="535.0"
+              prefHeight="45.0"
+              prefWidth="160.0"
+              text="Regresar"
+              style="-fx-background-color: white;
+                     -fx-border-color: #cccccc;" />
+
+      <Button mnemonicParsing="false"
+              onAction="#actualizar"
+              layoutX="655.0"
+              layoutY="535.0"
+              prefHeight="45.0"
+              prefWidth="150.0"
+              text="Actualizar"
+              style="-fx-background-color: #1b365d;
+                     -fx-text-fill: white;" />
+
+   </children>
+
+</AnchorPane>

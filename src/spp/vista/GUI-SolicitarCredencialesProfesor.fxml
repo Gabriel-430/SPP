@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.SolicitarCredencialesProfesorController">
+   <children>
+      <Label layoutX="320.0" layoutY="45.0" text="Registrar Profesor" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="340.0" layoutY="85.0" text="Ingrese los datos del profesor" textFill="#1f2937">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="125.0" prefWidth="800.0" />
+
+      <Label layoutX="95.0" layoutY="160.0" text="Nombre(s)" />
+      <TextField fx:id="tfNombres" layoutX="95.0" layoutY="185.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese el nombre(s)" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="475.0" layoutY="160.0" text="Apellidos" />
+      <TextField fx:id="tfApellidos" layoutX="475.0" layoutY="185.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese los apellidos" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="245.0" text="Correo institucional" />
+      <TextField fx:id="tfCorreoElectronico" layoutX="95.0" layoutY="270.0" prefHeight="45.0" prefWidth="330.0" promptText="ejemplo@dominio.com" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="475.0" layoutY="245.0" text="No. Personal" />
+      <TextField fx:id="tfNumeroPersonal" layoutX="475.0" layoutY="270.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese el No. Personal" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="330.0" text="Teléfono" />
+      <TextField fx:id="tfTelefono" layoutX="95.0" layoutY="355.0" prefHeight="45.0" prefWidth="220.0" promptText="Número telefónico" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="340.0" layoutY="330.0" text="Turno" />
+      <ComboBox fx:id="cmbTurno" layoutX="340.0" layoutY="355.0" prefHeight="45.0" prefWidth="220.0" promptText="Seleccione turno" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="585.0" layoutY="330.0" text="Contraseña" />
+      <PasswordField fx:id="pfContrasenia" layoutX="585.0" layoutY="355.0" prefHeight="45.0" prefWidth="220.0" promptText="Contraseña" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="415.0" text="Curso" />
+      <ComboBox fx:id="cmbCurso" layoutX="95.0" layoutY="440.0" prefHeight="45.0" prefWidth="710.0" promptText="Seleccione un curso sin profesor asignado" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label fx:id="lblMensaje" layoutX="95.0" layoutY="500.0" prefWidth="450.0" textFill="#b00020" />
+
+      <Button mnemonicParsing="false" onAction="#cancelarRegistro" layoutX="475.0" layoutY="535.0" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cancelar registro" />
+
+      <Button mnemonicParsing="false" onAction="#continuarRegistro" layoutX="655.0" layoutY="535.0" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Continuar" />
+   </children>
+</AnchorPane>

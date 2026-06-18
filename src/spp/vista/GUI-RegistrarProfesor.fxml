@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="100.0" layoutY="50.0" text="Registrar Profesor" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Label layoutX="100.0" layoutY="95.0" text="Ingrese los datos del profesor" textFill="#666666">
+         <font><Font size="15.0" /></font>
+      </Label>
+      
+      <Separator layoutX="100.0" layoutY="135.0" prefWidth="700.0" />
+      
+      <HBox layoutX="100.0" layoutY="170.0" spacing="30.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Nombre(s)" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="335.0" promptText="Ingrese el nombre(s)" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Apellidos" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="335.0" promptText="Ingrese los apellidos" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <HBox layoutX="100.0" layoutY="270.0" spacing="30.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Correo institucional" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="335.0" promptText="ejemplo@dominio.com" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="No. Personal" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="335.0" promptText="Ingrese el No. Personal" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <HBox layoutX="100.0" layoutY="370.0" spacing="30.0">
+         <children>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Teléfono" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <TextField prefHeight="40.0" prefWidth="213.0" promptText="Ingrese un número telefónico" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Turno" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <ComboBox prefHeight="40.0" prefWidth="213.0" promptText="Seleccione el turno..." style="-fx-background-color: #fafafa; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Contraseña" textFill="#333333">
+                     <font><Font name="System Bold" size="14.0" /></font>
+                  </Label>
+                  <PasswordField prefHeight="40.0" prefWidth="214.0" promptText="Contraseña" style="-fx-background-radius: 4; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-background-color: #fafafa; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      
+      <Button layoutX="460.0" layoutY="540.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-text-fill: #333333; -fx-font-size: 14px; -fx-cursor: hand;" text="Cancelar registro" />
+      <Button layoutX="630.0" layoutY="540.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-background-radius: 4; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand;" text="Continuar" />
+   </children>
+</AnchorPane>

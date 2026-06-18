@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.ActualizarProyectoController">
+   <children>
+      <Label layoutX="300.0" layoutY="45.0" text="Actualizar Proyecto" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="105.0" prefWidth="800.0" />
+
+      <Label layoutX="95.0" layoutY="155.0" text="Nombre del proyecto" />
+      <TextField fx:id="tfNombreProyecto" layoutX="95.0" layoutY="180.0" prefHeight="45.0" prefWidth="710.0" />
+
+      <Label layoutX="95.0" layoutY="255.0" text="Cupo disponible" />
+      <TextField fx:id="tfCupoDisponible" layoutX="95.0" layoutY="280.0" prefHeight="45.0" prefWidth="220.0" />
+
+      <Label layoutX="95.0" layoutY="355.0" text="Descripción de actividades" />
+      <TextArea fx:id="taDescripcionActividades" layoutX="95.0" layoutY="380.0" prefHeight="100.0" prefWidth="710.0" wrapText="true" />
+
+      <Label fx:id="lblMensaje" layoutX="95.0" layoutY="500.0" prefWidth="600.0" textFill="#b00020" wrapText="true" />
+
+      <Button mnemonicParsing="false" onAction="#regresar" layoutX="475.0" layoutY="535.0" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Regresar" />
+
+      <Button mnemonicParsing="false" onAction="#actualizar" layoutX="655.0" layoutY="535.0" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Actualizar" />
+   </children>
+</AnchorPane>

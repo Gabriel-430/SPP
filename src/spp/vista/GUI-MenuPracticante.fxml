@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.MenuPracticanteController">
+   <children>
+      <Label layoutX="295.0" layoutY="50.0" text="Menú Principal - Practicante" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Separator layoutX="50.0" layoutY="100.0" prefWidth="800.0" />
+      
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="180.0" prefWidth="800.0" spacing="20.0">
+         <children>
+            <VBox spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#mostrarProyectos" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Proyectos" />
+                  <Button mnemonicParsing="false" onAction="#mostrarMenuEntregables" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Subir entregables" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#mostrarBuzon" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Buzón" />
+                  <Button mnemonicParsing="false" onAction="#mostrarEnviarMensaje" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Enviar mensaje" />
+               </children>
+            </VBox>
+            
+            <VBox spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cerrar sesión" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

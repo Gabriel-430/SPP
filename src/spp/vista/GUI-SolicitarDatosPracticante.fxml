@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.SolicitarDatosPracticanteController">
+   <children>
+      <Label layoutX="280.0" layoutY="45.0" text="Registrar Practicante" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="285.0" layoutY="85.0" text="Ingrese los datos personales y académicos" textFill="#1f2937">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="125.0" prefWidth="800.0" />
+
+      <Label layoutX="95.0" layoutY="160.0" text="Matrícula" />
+      <TextField fx:id="tfMatricula" layoutX="95.0" layoutY="185.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese la matrícula" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="475.0" layoutY="160.0" text="Nombre completo" />
+      <TextField fx:id="tfNombreCompleto" layoutX="475.0" layoutY="185.0" prefHeight="45.0" prefWidth="330.0" promptText="Ingrese el nombre completo" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="245.0" text="Sexo" />
+      <ComboBox fx:id="cmbSexo" layoutX="95.0" layoutY="270.0" prefHeight="45.0" prefWidth="220.0" promptText="Seleccione sexo" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="340.0" layoutY="245.0" text="Créditos acumulados" />
+      <TextField fx:id="tfCreditosAcumulados" layoutX="340.0" layoutY="270.0" prefHeight="45.0" prefWidth="220.0" promptText="Ej. 256" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <CheckBox fx:id="chkSeguroMedicoVigente" layoutX="585.0" layoutY="282.0" text="Seguro médico vigente" />
+
+      <Label layoutX="95.0" layoutY="330.0" text="Curso activo" />
+      <ComboBox fx:id="cmbCurso" layoutX="95.0" layoutY="355.0" prefHeight="45.0" prefWidth="710.0" promptText="Seleccione un curso activo" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label fx:id="lblMensaje" layoutX="95.0" layoutY="425.0" prefWidth="650.0" textFill="#b00020" wrapText="true" />
+
+      <Button mnemonicParsing="false" onAction="#cancelarRegistro" layoutX="475.0" layoutY="515.0" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cancelar" />
+
+      <Button mnemonicParsing="false" onAction="#continuarRegistro" layoutX="655.0" layoutY="515.0" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Continuar" />
+   </children>
+</AnchorPane>

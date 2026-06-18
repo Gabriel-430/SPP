@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.SolicitarDatosProyectoController">
+   <children>
+      <Label layoutX="300.0" layoutY="45.0" text="Registrar Proyecto" textFill="#0a1930">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="315.0" layoutY="85.0" text="Ingrese los datos generales del proyecto" textFill="#1f2937">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="50.0" layoutY="125.0" prefWidth="800.0" />
+
+      <Label layoutX="95.0" layoutY="170.0" text="Nombre del proyecto" />
+      <TextField fx:id="tfNombreProyecto" layoutX="95.0" layoutY="195.0" prefHeight="45.0" prefWidth="710.0" promptText="Ingrese el nombre del proyecto" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="270.0" text="Cupo disponible" />
+      <TextField fx:id="tfCupoDisponible" layoutX="95.0" layoutY="295.0" prefHeight="45.0" prefWidth="220.0" promptText="Ej. 3" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label layoutX="95.0" layoutY="370.0" text="Descripción de actividades" />
+      <TextArea fx:id="taDescripcionActividades" layoutX="95.0" layoutY="395.0" prefHeight="90.0" prefWidth="710.0" promptText="Describa las actividades principales del proyecto" wrapText="true" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 4; -fx-background-radius: 4;" />
+
+      <Label fx:id="lblMensaje" layoutX="95.0" layoutY="500.0" prefWidth="600.0" textFill="#b00020" wrapText="true" />
+
+      <Button mnemonicParsing="false" onAction="#cancelarRegistro" layoutX="475.0" layoutY="535.0" prefHeight="45.0" prefWidth="160.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cancelar" />
+
+      <Button mnemonicParsing="false" onAction="#confirmarDatos" layoutX="655.0" layoutY="535.0" prefHeight="45.0" prefWidth="150.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Confirmar Datos" />
+   </children>
+</AnchorPane>

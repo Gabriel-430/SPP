@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.ListaReportesFinalesController">
+   <children>
+      <Label layoutX="100.0" layoutY="50.0" text="Reportes Finales Pendientes" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Separator layoutX="100.0" layoutY="100.0" prefWidth="700.0" />
+      <TableView fx:id="tblReportes" layoutX="100.0" layoutY="130.0" prefHeight="350.0" prefWidth="700.0">
+        <columns>
+          <TableColumn fx:id="colMatricula" prefWidth="350.0" text="Matrícula del Practicante" />
+          <TableColumn fx:id="colFecha" prefWidth="350.0" text="Fecha de Entrega" />
+        </columns>
+      </TableView>
+      <Button layoutX="100.0" layoutY="540.0" mnemonicParsing="false" onAction="#clicCancelarEvaluacion" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-radius: 4; -fx-cursor: hand;" text="Cancelar evaluación" />
+      <Button layoutX="630.0" layoutY="540.0" mnemonicParsing="false" onAction="#clicSeleccionarReporte" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-background-radius: 4; -fx-cursor: hand;" text="Evaluar Reporte" />
+   </children>
+</AnchorPane>

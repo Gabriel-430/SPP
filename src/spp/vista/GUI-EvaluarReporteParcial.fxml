@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1100.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="spp.controlador.EvaluarReporteParcialController">
+
+   <children>
+      <Label layoutX="35.0" layoutY="30.0" text="Evaluar Reporte Parcial" textFill="#12366b">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="35.0" layoutY="90.0" prefWidth="1030.0" />
+
+      <ComboBox fx:id="cmbReportes"
+                layoutX="35.0"
+                layoutY="115.0"
+                prefHeight="45.0"
+                prefWidth="680.0"
+                onAction="#seleccionarReporte"
+                promptText="Seleccione un reporte" />
+
+      <VBox layoutX="35.0"
+            layoutY="180.0"
+            prefHeight="420.0"
+            prefWidth="680.0"
+            alignment="CENTER"
+            spacing="15.0"
+            style="-fx-border-color: #87CEEB; -fx-border-width: 1.5; -fx-background-color: #f8f8f8;">
+         <children>
+            <Label text="Vista previa no disponible para archivos PDF.">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+
+            <Label text="Use el botón Abrir Archivo para visualizar el reporte." />
+
+            <Button fx:id="btnAbrir"
+                    mnemonicParsing="false"
+                    onAction="#clicAbrirArchivo"
+                    prefHeight="40.0"
+                    prefWidth="160.0"
+                    text="Abrir Archivo" />
+         </children>
+      </VBox>
+
+      <Button fx:id="btnDescargar"
+              layoutX="35.0"
+              layoutY="615.0"
+              mnemonicParsing="false"
+              onAction="#clicDescargarArchivo"
+              prefHeight="45.0"
+              prefWidth="185.0"
+              text="Descargar Archivo" />
+
+      <Label layoutX="740.0" layoutY="120.0" text="Herramientas de Evaluación" textFill="#12366b">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="740.0" layoutY="165.0" prefWidth="335.0" />
+
+      <Label layoutX="740.0" layoutY="195.0" text="Calificación (0 - 100)">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+
+      <TextField fx:id="tfCalificacion"
+                 layoutX="740.0"
+                 layoutY="230.0"
+                 prefHeight="45.0"
+                 prefWidth="335.0"
+                 promptText="Ej. 95" />
+
+      <Button fx:id="btnGuardarCalificacion"
+              layoutX="740.0"
+              layoutY="300.0"
+              mnemonicParsing="false"
+              onAction="#clicGuardarCalificacion"
+              prefHeight="50.0"
+              prefWidth="335.0"
+              style="-fx-background-color: #1b3f75; -fx-text-fill: white; -fx-font-weight: bold;"
+              text="Guardar Calificación" />
+
+      <Button fx:id="btnAgregarObservacion"
+              layoutX="740.0"
+              layoutY="370.0"
+              mnemonicParsing="false"
+              onAction="#clicAgregarObservacion"
+              prefHeight="50.0"
+              prefWidth="335.0"
+              text="Agregar Observación" />
+
+      <Button layoutX="740.0"
+              layoutY="615.0"
+              mnemonicParsing="false"
+              onAction="#clicCancelarRegresar"
+              prefHeight="45.0"
+              prefWidth="335.0"
+              text="Cancelar y Regresar" />
+   </children>
+</AnchorPane>

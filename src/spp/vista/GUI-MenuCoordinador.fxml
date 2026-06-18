@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.MenuCoordinadorController">
+   <children>
+      <Label layoutX="275.0" layoutY="50.0" text="Menú Principal - Coordinador" textFill="#0a1930">
+         <font><Font name="System Bold" size="26.0" /></font>
+      </Label>
+      <Separator layoutX="50.0" layoutY="100.0" prefWidth="800.0" />
+
+      <HBox alignment="CENTER" layoutX="50.0" layoutY="145.0" prefWidth="800.0" spacing="20.0">
+         <children>
+            <VBox spacing="22.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#mostrarRegistrarProyecto" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Registrar proyecto" />
+                  <Button mnemonicParsing="false" onAction="#mostrarActualizarProyecto" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Actualizar proyecto" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Mostrar proyectos" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Inactivar proyecto" />
+               </children>
+            </VBox>
+
+            <VBox spacing="22.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Asignar proyecto" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Desasignar proyecto" />
+                  <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Mostrar cursos" />
+                  <Button mnemonicParsing="false" onAction="#mostrarEnviarMensaje" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Enviar mensaje" />
+                  <Button mnemonicParsing="false" onAction="#mostrarBuzon" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Consultar buzón" />
+               </children>
+            </VBox>
+
+            <VBox spacing="22.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#mostrarRegistrarPracticante" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Registrar practicante" />
+                  <Button mnemonicParsing="false" onAction="#mostrarActivarPracticante" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Activar practicante" />
+                  <Button mnemonicParsing="false" onAction="#mostrarInactivarPracticante" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Inactivar practicante" />
+                  <Button mnemonicParsing="false" onAction="#mostrarPracticantes" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: #1b365d; -fx-text-fill: white; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Mostrar practicantes" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+
+      <Button layoutX="330.0" layoutY="540.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="45.0" prefWidth="240.0" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-font-size: 14px; -fx-background-radius: 4; -fx-cursor: hand;" text="Cerrar sesión" />
+   </children>
+</AnchorPane>

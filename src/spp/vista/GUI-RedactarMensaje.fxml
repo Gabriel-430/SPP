@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spp.controlador.RedactarMensajeController">
+   <children>
+      <VBox layoutX="60.0" layoutY="40.0" prefHeight="550.0" prefWidth="780.0" spacing="20.0">
+         <children>
+            <Label text="Redactar Mensaje" textFill="#1b396a">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <Label prefWidth="90.0" text="Para:" textFill="#334155">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtDestinatario" prefHeight="40.0" prefWidth="675.0" promptText="Nombre de usuario del destinatario" style="-fx-background-radius: 6; -fx-border-color: #cbd5e1; -fx-border-radius: 6;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <Label prefWidth="90.0" text="Asunto:" textFill="#334155">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAsunto" prefHeight="40.0" prefWidth="675.0" promptText="Asunto del mensaje" style="-fx-background-radius: 6; -fx-border-color: #cbd5e1; -fx-border-radius: 6;">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox spacing="10.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Cuerpo del mensaje:" textFill="#334155">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="txtContenido" prefHeight="260.0" prefWidth="780.0" promptText="Escriba su mensaje aquí..." style="-fx-background-radius: 6; -fx-border-color: #cbd5e1; -fx-border-radius: 6;" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER_RIGHT" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#clicCancelar" prefHeight="45.0" prefWidth="220.0" style="-fx-background-color: #f1f5f9; -fx-border-color: #cbd5e1; -fx-border-radius: 6; -fx-background-radius: 6; -fx-cursor: hand;" text="Cancelar envío de mensaje" textFill="#0f172a">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#clicEnviar" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #1b396a; -fx-background-radius: 6; -fx-cursor: hand;" text="Enviar mensaje" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

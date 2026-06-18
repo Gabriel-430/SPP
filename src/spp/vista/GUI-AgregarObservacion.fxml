@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="360.0" prefWidth="600.0"
+            style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="spp.controlador.AgregarObservacionController">
+
+   <children>
+      <Label layoutX="150.0" layoutY="35.0" text="Agregar Observación" textFill="#12366b">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Label>
+
+      <Separator layoutX="45.0" layoutY="85.0" prefWidth="510.0" />
+
+      <Label layoutX="45.0" layoutY="115.0" text="Observación:" />
+
+      <TextArea fx:id="taObservacion"
+                layoutX="45.0"
+                layoutY="140.0"
+                prefHeight="120.0"
+                prefWidth="510.0"
+                promptText="Ingrese una observación sobre el reporte..."
+                wrapText="true" />
+
+      <Button layoutX="210.0"
+              layoutY="290.0"
+              mnemonicParsing="false"
+              onAction="#cerrarGUI"
+              prefHeight="40.0"
+              prefWidth="130.0"
+              text="Cancelar" />
+
+      <Button layoutX="365.0"
+              layoutY="290.0"
+              mnemonicParsing="false"
+              onAction="#clicGuardarObservacion"
+              prefHeight="40.0"
+              prefWidth="130.0"
+              style="-fx-background-color: #1b3f75; -fx-text-fill: white;"
+              text="Guardar" />
+   </children>
+</AnchorPane>
