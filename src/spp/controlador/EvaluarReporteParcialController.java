@@ -55,6 +55,7 @@ public class EvaluarReporteParcialController {
     btnDescargar.setDisable(true);
     configurarComboBox();
     cargarReportesPendientes();
+    limitarCalificacion();
   }
 
   private void configurarComboBox() {
@@ -244,5 +245,25 @@ public class EvaluarReporteParcialController {
       throw new IllegalArgumentException(
           "La calificación debe ser numérica.");
     }
+  }
+  
+  private void limitarCalificacion() {
+      tfCalificacion.textProperty().addListener((observable, valorAnterior,
+      valorNuevo) -> {
+      if (valorNuevo == null || valorNuevo.isEmpty()) {
+          return;
+      }
+
+      if (!valorNuevo.matches("\\d*")) {
+          tfCalificacion.setText(valorAnterior);
+          return;
+      }
+
+      int calificacion = Integer.parseInt(valorNuevo);
+
+      if (calificacion > 100) {
+          tfCalificacion.setText(valorAnterior);
+      }
+    });
   }
 }

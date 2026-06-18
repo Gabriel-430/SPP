@@ -61,28 +61,33 @@ public class SolicitarCredencialesProfesorController {
 
   @FXML
   private void initialize() {
-    cargarTurnos();
-    cargarCursosSinProfesor();
+      cargarTurnos();
+      cargarCursosSinProfesor();
+      limitarNumerosYLongitud(tfTelefono, 10);
+      limitarNumerosYLongitud(tfNumeroPersonal, 10);
+      limitarLongitud(tfCorreoElectronico, 40);
+      limitarLongitud(tfNombres, 20);
+      limitarLongitud(tfApellidos, 19);
   }
 
   @FXML
   private void continuarRegistro(Event evento) {
-    limpiarMensaje();
+      limpiarMensaje();
 
-    if (!confirmarRegistro()) {
+      if (!confirmarRegistro()) {
       return;
-    }
+      }
 
-    try {
-      profesorService.registrarProfesor(
-          tfNombres.getText(),
-          tfApellidos.getText(),
-          tfCorreoElectronico.getText(),
-          tfNumeroPersonal.getText(),
-          tfTelefono.getText(),
-          cmbTurno.getValue(),
-          pfContrasenia.getText(),
-          cmbCurso.getValue());
+      try {
+          profesorService.registrarProfesor(
+              tfNombres.getText(),
+              tfApellidos.getText(),
+              tfCorreoElectronico.getText(),
+              tfNumeroPersonal.getText(),
+              tfTelefono.getText(),
+              cmbTurno.getValue(),
+              pfContrasenia.getText(),
+              cmbCurso.getValue());
 
       mostrarInformacion("Registro exitoso",
           "El profesor fue exitosamente registrado en el sistema.");
@@ -90,90 +95,111 @@ public class SolicitarCredencialesProfesorController {
       UtilidadesGUI.mostrarGUI("/spp/vista/GUI-MenuAdministrador.fxml",
           evento, "Menú Administrador");
 
-    } catch (IllegalArgumentException excepcion) {
-      mostrarAdvertencia("Datos inválidos", excepcion.getMessage());
+      } catch (IllegalArgumentException excepcion) {
+          mostrarAdvertencia("Datos inválidos", excepcion.getMessage());
 
-    } catch (SQLException excepcion) {
-      mostrarError("Error al acceder a la base de datos",
+      } catch (SQLException excepcion) {
+          mostrarError("Error al acceder a la base de datos",
           "No se pudo acceder a la base de datos. Por favor intente "
           + "nuevamente en unos minutos.");
-      excepcion.printStackTrace();
-    }
+          excepcion.printStackTrace();
+      }
   }
 
   @FXML
   private void cancelarRegistro(Event evento) {
-    Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
-    alerta.setTitle("Cancelar registro");
-    alerta.setHeaderText("¿Está seguro de que desea cancelar el registro "
-        + "del profesor?");
-    alerta.setContentText("Los datos ingresados no serán guardados.");
+      Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+      alerta.setTitle("Cancelar registro");
+      alerta.setHeaderText("¿Está seguro de que desea cancelar el registro "
+      + "del profesor?");
+      alerta.setContentText("Los datos ingresados no serán guardados.");
 
-    Optional<ButtonType> respuesta = alerta.showAndWait();
+      Optional<ButtonType> respuesta = alerta.showAndWait();
 
-    if (respuesta.isPresent() && respuesta.get() == ButtonType.OK) {
-      UtilidadesGUI.mostrarGUI("/spp/vista/GUI-MenuAdministrador.fxml",
+      if (respuesta.isPresent() && respuesta.get() == ButtonType.OK) {
+          UtilidadesGUI.mostrarGUI("/spp/vista/GUI-MenuAdministrador.fxml",
           evento, "Menú Administrador");
-    }
+      }
   }
 
   private void cargarTurnos() {
-    cmbTurno.getItems().setAll("Matutino", "Vespertino");
+      cmbTurno.getItems().setAll("Matutino", "Vespertino");
   }
 
   private void cargarCursosSinProfesor() {
-    try {
-      List<Curso> cursos = cursoService.obtenerCursosSinProfesor();
-      cmbCurso.getItems().setAll(cursos);
+      try {
+          List<Curso> cursos = cursoService.obtenerCursosSinProfesor();
+          cmbCurso.getItems().setAll(cursos);
 
-      if (cursos.isEmpty()) {
-        lblMensaje.setText("No hay cursos disponibles para asignar.");
-      }
+          if (cursos.isEmpty()) {
+              lblMensaje.setText("No hay cursos disponibles para asignar.");
+          }
 
-    } catch (SQLException excepcion) {
-      mostrarError("Error al acceder a la base de datos",
+      } catch (SQLException excepcion) {
+          mostrarError("Error al acceder a la base de datos",
           "No se pudo acceder a la base de datos. Por favor intente "
           + "nuevamente en unos minutos.");
-      excepcion.printStackTrace();
-    }
+          excepcion.printStackTrace();
+      }
   }
 
   private boolean confirmarRegistro() {
-    Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
-    alerta.setTitle("Confirmación de registro");
-    alerta.setHeaderText("¿Seguro que desea ingresar al profesor?");
-    alerta.setContentText("Seleccione Aceptar para registrar al profesor.");
+      Alert alerta = new Alert(Alert.AlertType.CONFIRMATION);
+     alerta.setTitle("Confirmación de registro");
+      alerta.setHeaderText("¿Seguro que desea ingresar al profesor?");
+      alerta.setContentText("Seleccione Aceptar para registrar al profesor.");
 
-    Optional<ButtonType> respuesta = alerta.showAndWait();
+      Optional<ButtonType> respuesta = alerta.showAndWait();
 
-    return respuesta.isPresent() && respuesta.get() == ButtonType.OK;
+      return respuesta.isPresent() && respuesta.get() == ButtonType.OK;
   }
 
   private void limpiarMensaje() {
-    lblMensaje.setText("");
+      lblMensaje.setText("");
   }
 
   private void mostrarInformacion(String titulo, String mensaje) {
-    Alert alerta = new Alert(Alert.AlertType.INFORMATION);
-    alerta.setTitle(titulo);
-    alerta.setHeaderText(null);
-    alerta.setContentText(mensaje);
-    alerta.showAndWait();
+      Alert alerta = new Alert(Alert.AlertType.INFORMATION);
+      alerta.setTitle(titulo);
+      alerta.setHeaderText(null);
+      alerta.setContentText(mensaje);
+      alerta.showAndWait();
   }
 
   private void mostrarAdvertencia(String titulo, String mensaje) {
-    Alert alerta = new Alert(Alert.AlertType.WARNING);
-    alerta.setTitle(titulo);
-    alerta.setHeaderText(null);
-    alerta.setContentText(mensaje);
-    alerta.showAndWait();
-  }
+      Alert alerta = new Alert(Alert.AlertType.WARNING);
+      alerta.setTitle(titulo);
+      alerta.setHeaderText(null);
+      alerta.setContentText(mensaje);
+      alerta.showAndWait();
+   }
 
   private void mostrarError(String titulo, String mensaje) {
-    Alert alerta = new Alert(Alert.AlertType.ERROR);
-    alerta.setTitle(titulo);
-    alerta.setHeaderText(null);
-    alerta.setContentText(mensaje);
-    alerta.showAndWait();
+      Alert alerta = new Alert(Alert.AlertType.ERROR);
+      alerta.setTitle(titulo);
+      alerta.setHeaderText(null);
+      alerta.setContentText(mensaje);
+      alerta.showAndWait();
+   }
+  
+  private void limitarLongitud(TextField campo, int longitudMaxima) {
+      campo.textProperty().addListener((observable, valorAnterior, valorNuevo) -> {
+          if (valorNuevo != null && valorNuevo.length() > longitudMaxima) {
+              campo.setText(valorAnterior);
+          }
+       });
   }
+
+    private void limitarNumerosYLongitud(TextField campo, int longitudMaxima) {
+        campo.textProperty().addListener((observable, valorAnterior, valorNuevo) -> {
+            if (valorNuevo == null) {
+                return;
+            }
+
+            if (!valorNuevo.matches("\\d*") || valorNuevo.length() > longitudMaxima) {
+                campo.setText(valorAnterior);
+            }
+        });
+    }
+    
 }

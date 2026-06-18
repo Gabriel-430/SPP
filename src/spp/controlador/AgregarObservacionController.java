@@ -25,6 +25,7 @@ public class AgregarObservacionController {
   @FXML
   private void initialize() {
     taObservacion.setText(obtenerObservacionTemporal());
+    limitarObservacion();
   }
 
   @FXML
@@ -80,5 +81,14 @@ public class AgregarObservacionController {
 
     UtilidadesGUI.mostrarGUI("/spp/vista/GUI-EvaluarReporteParcial.fxml",
         event, "Evaluar Reporte Parcial");
+  }
+  
+  private void limitarObservacion() {
+      taObservacion.textProperty().addListener((observable, valorAnterior,
+      valorNuevo) -> {
+      if (valorNuevo != null && valorNuevo.length() > 100) {
+          taObservacion.setText(valorAnterior);
+      }
+      });
   }
 }

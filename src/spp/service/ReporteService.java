@@ -81,7 +81,14 @@ public class ReporteService {
   private void validarObservacion(String observacion) {
     if (observacion == null || observacion.trim().isEmpty()) {
       throw new IllegalArgumentException(
-          "Debe agregar una observación antes de evaluar el reporte.");
+        "Debe agregar una observación antes de evaluar el reporte.");
+    }
+
+    if (observacion.trim().length() > 100) {
+        throw new IllegalArgumentException(
+        "La observación no puede superar los 100 caracteres.");
     }
   }
+  
+  
 }
